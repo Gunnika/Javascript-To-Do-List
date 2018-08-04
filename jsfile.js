@@ -1,10 +1,3 @@
-// var InputText= document.getElementById("InputText").value;
-// var PendingTasks= document.getElementsByClassName("pending-tasks")[0];
-
-// var listItem = document.createElement("li");
-// listItem.innerText = InputText;
-// PendingTasks.appendChild(listItem);
-
 function newElement() {
   var newli = document.createElement("li");
   var inputValue = document.getElementById("InputText").value;
@@ -13,15 +6,17 @@ function newElement() {
   newli.appendChild(label);
   var deleteButton=document.createElement("button");
   deleteButton.innerText="X";
-  deleteButton.className="delete";
-  deleteButton.onclick="delElement()";
-  newli.appendChild(deleteButton);
+  deleteButton.id="delete";
+  deleteButton.onclick = function() {
 
-//   var cross= document.createElement("div");
-//   cross.innerHTML= '<button type="button" class="close" onclick="delElement()" aria-label="Close">
-//   <span aria-hidden="true">&times;</span>
-// </button>'
-//   newli.appendChild(cross);
+      var listItem = this.parentNode;
+
+      var ol = listItem.parentNode;
+
+      ol.removeChild(listItem);
+    };
+    
+  newli.appendChild(deleteButton);
 
   var PendingTasks= document.getElementById("pending-tasks");
   if (inputValue === '') {
@@ -33,11 +28,11 @@ function newElement() {
   document.getElementById("InputText").value = "";
 }
 
-function delElement() {
-var listItem= this.parentNode;
-var ol= listItem.parentNode;
-ol.removeChild(listItem);
+// function delElement() {
+// var listItem= this.parentNode;
+// var ol= listItem.parentNode;
+// ol.removeChild(listItem);
 
-}
+// };
 
 

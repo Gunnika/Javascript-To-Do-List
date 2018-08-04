@@ -1,10 +1,3 @@
-/*.panel panel-default {
-	width: 200px;
-    height: 100px;
-    padding: 20px;
-    border: 10px solid yellowgreen;
-}
-*/
 * {
     box-sizing: border-box;
 }
@@ -16,7 +9,7 @@
 }
 
 h1 {
-font-family: Impact;
+font-family: Bookman;
 }
 
 .title {
@@ -24,7 +17,8 @@ font-family: Impact;
 	font-family: Aclonica;
 	
 	font-size: 50px;
-	color: #D2691E;
+    font-style:italic;
+	color: #CD5C5C;
 }
 
 ol {
@@ -49,14 +43,9 @@ ol li {
     user-select: none;
 }
 
-/*ul li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
-}*/
 
 ol li:hover {
-    background: #F4A460;
+    background: #BC8F8F;
 }
 
 input {
@@ -72,11 +61,11 @@ input {
 .addbtn {
 	padding: 10px;
     width: 25%;
-    /*background: #d9d9d9;*/
     color: #555;
     float: left;
     text-align: center;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 0;
@@ -85,10 +74,10 @@ input {
 }
 
 .addbtn:hover {
-    background-color: #bbb;
+    background-color: #E6E6FA;
 }
 
-.delete {
+#delete {
 	position: absolute;
     right: 0;
     top: 0;
